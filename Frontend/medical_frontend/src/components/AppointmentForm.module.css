@@ -1,0 +1,117 @@
+/* src/components/AppointmentForm.module.css */
+
+.formContainer {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formContainer h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.25rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.formContainer input,
+.formContainer select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.formContainer input:focus,
+.formContainer select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.formContainer button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.formContainer button:hover {
+  background-color: #2980b9;
+}
+
+/* Date and time inputs specific styling */
+.formContainer input[type="date"],
+.formContainer input[type="time"] {
+  padding: 0.7rem 1rem; /* Slightly adjusted for better appearance */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 8px;
+  }
+  
+  .formContainer h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContainer {
+    padding: 1.25rem;
+    margin: 0.5rem;
+    box-shadow: none;
+    border: 1px solid #eee;
+  }
+  
+  .formContainer input,
+  .formContainer select {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.95rem;
+  }
+  
+  .formContainer button {
+    padding: 0.7rem;
+  }
+}
+
+/* For very small screens (e.g., iPhone SE) */
+@media (max-width: 375px) {
+  .formContainer {
+    padding: 1rem;
+  }
+  
+  .formLabel {
+    font-size: 0.9rem;
+  }
+}

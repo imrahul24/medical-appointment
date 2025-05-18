@@ -1,0 +1,173 @@
+/* src/components/AppointmentList.module.css */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* Allows wrapping to prevent overlapping */
+  align-items: center;
+  justify-content: space-between; /* Distributes items evenly */
+  width: 100%; /* Ensures proper layout */
+}
+
+.filterGroup {
+  min-width: 200px;
+  flex: 1;
+}
+
+.filterLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.filterSelect,
+.filterDate {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.filterSelect:focus,
+.filterDate:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.appointmentList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.appointmentCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appointmentCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardField {
+  margin: 0.75rem 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cardField strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+
+
+.newAppointmentButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  height: fit-content;
+  margin-left: auto; /* Aligns the button to the right */
+}
+
+.newAppointmentButton:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filters {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .filterGroup {
+    min-width: 100%;
+  }
+  
+  .appointmentList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .appointmentCard {
+    padding: 1.25rem;
+  }
+  
+  .cardField {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerActions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .newAppointmentButton {
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .filters {
+    width: 100%;
+  }
+}
